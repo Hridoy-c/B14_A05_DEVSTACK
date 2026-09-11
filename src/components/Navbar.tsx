@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="border-b border-gray-100 bg-white">
+    <div className=" sticky top-0 border-b border-gray-100 bg-white">
       <nav className="container mx-auto">
         <div className="mx-auto flex h-[75px] items-center justify-between px-4 sm:px-6">
           <button
