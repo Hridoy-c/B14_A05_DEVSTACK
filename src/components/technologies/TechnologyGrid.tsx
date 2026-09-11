@@ -1,11 +1,14 @@
+import type { Dispatch, SetStateAction } from "react";
 import type { ITechnologyType } from "../../types/TechnologyType";
 import TechnologyCard from "./TechnologyCard";
 
 interface TechnologyGridProps {
   Technologies: ITechnologyType[]
+  YourStack: ITechnologyType[]
+  setYourStack: Dispatch<SetStateAction<ITechnologyType[]>>
 }
 
-const TechnologyGrid = ({ Technologies }: TechnologyGridProps) => {
+const TechnologyGrid = ({ Technologies, YourStack, setYourStack }: TechnologyGridProps) => {
   return (
     <div className="  ">
       <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
@@ -15,8 +18,8 @@ const TechnologyGrid = ({ Technologies }: TechnologyGridProps) => {
         Pick one technology per category to build your ideal stack.
       </p>
 
-      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {Technologies.map((technology) => (<TechnologyCard key={technology.id} technology={technology} />
+      <div className="mt-6 mb-50 grid ml-3 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {Technologies.map((technology) => (<TechnologyCard key={technology.id} technology={technology} YourStack={YourStack} setYourStack={setYourStack} />
         ))}
       </div>
     </div>

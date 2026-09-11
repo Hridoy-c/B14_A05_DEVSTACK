@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="border-t container mx-auto mt-[100px]  border-gray-100 bg-white">
-      <div className="  max-w-7xl px-4 py-12 sm:px-6">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t container mx-auto border-gray-100 bg-white">
+      <div className=" max-w-7xl px-4 py-12 sm:px-6">
+        <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2 sm:justify-start">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-600 to-pink-600 text-xs font-bold text-white">
                 DS
               </div>
@@ -13,19 +13,21 @@ const Footer = () => {
               </h2>
             </div>
 
-            <p className="mt-4 max-w-xs text-sm leading-6 text-gray-500">
+            <p className="mx-auto mt-4 max-w-xs text-sm leading-6 text-gray-500 sm:mx-0">
               Curated tools, technologies, and resources for developers
               building modern software.
             </p>
 
-            <div className="mt-4 flex items-center gap-5 text-sm font-medium text-slate-900">
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-slate-900 sm:justify-start sm:gap-5">
               <a href="#">GitHub</a>
+              <span className="text-gray-300 sm:hidden">•</span>
               <a href="#">Twitter</a>
+              <span className="text-gray-300 sm:hidden">•</span>
               <a href="#">LinkedIn</a>
             </div>
           </div>
 
-          <div>
+          <div className="hidden sm:block">
             <h3 className="text-xs font-semibold tracking-wide text-slate-900">
               PRODUCT
             </h3>
@@ -36,7 +38,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="hidden sm:block">
             <h3 className="text-xs font-semibold tracking-wide text-slate-900">
               COMPANY
             </h3>
@@ -47,7 +49,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="hidden sm:block">
             <h3 className="text-xs font-semibold tracking-wide text-slate-900">
               LEGAL
             </h3>
