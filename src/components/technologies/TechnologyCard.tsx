@@ -20,7 +20,7 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
 
       <h3 className="mt-4 text-xl font-bold text-slate-900">{technology.name}</h3>
 
-      <p className="mt-2 text-sm leading-6 text-gray-500">
+      <p className="mt-2 line-clamp-2 text-sm leading-6 text-gray-500 min-h-[3rem]">
         {technology.description}
       </p>
 
