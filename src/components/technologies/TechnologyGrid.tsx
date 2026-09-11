@@ -18,7 +18,7 @@ const TechnologyGrid = ({ Technologies, YourStack, setYourStack }: TechnologyGri
         Pick one technology per category to build your ideal stack.
       </p>
 
-      <div className="mt-6 mb-50 grid ml-3 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 mb-10 grid ml-3 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {Technologies.map((technology) => (<TechnologyCard key={technology.id} technology={technology} YourStack={YourStack} setYourStack={setYourStack} />
         ))}
       </div>
