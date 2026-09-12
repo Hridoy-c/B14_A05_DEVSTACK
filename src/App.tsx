@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import ExploreTechnologies from "./components/technologies/ExploreTechnologies"
 import type { ITechnologyType } from "./types/TechnologyType"
 import Footer from "./components/Footer"
+import Loaders from "./components/Loaders"
 
 
 const TechnologyPromise = async(): Promise<ITechnologyType[]> => {
@@ -20,7 +21,7 @@ const App = () => {
     <div>
       <Navbar />
       <Hero />
-      <Suspense fallback={<div className="text-center text-2xl font-bold">Loading...</div>}>
+      <Suspense fallback={<Loaders />}>
       <ExploreTechnologies TechnologyPromise={TechnologyPromise()} />
       </Suspense>
       <Footer />

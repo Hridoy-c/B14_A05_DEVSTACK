@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { ITechnologyType } from "../../types/TechnologyType";
 import YourStackCard from "./YourStackCard";
 
@@ -9,11 +8,6 @@ export interface StackSidebarProps {
 }
 
 const StackSidebar = ({ YourStack, onRemoveOne, onRemoveAll }: StackSidebarProps) => {
-
-   
-
-
-     
 
     
   return (
@@ -31,7 +25,7 @@ const StackSidebar = ({ YourStack, onRemoveOne, onRemoveAll }: StackSidebarProps
           </>
           
         ) : (
-          <YourStackCard YourStack={YourStack} onRemoveOne={onRemoveOne} onRemoveAll={onRemoveAll} />
+          <YourStackCard YourStack={YourStack} onRemoveOne={onRemoveOne} onRemoveAll={onRemoveAll}  />
         )
       }
       

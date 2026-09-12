@@ -6,6 +6,7 @@ interface YourStackCardProps {
     onRemoveOne: (technologyId: string) => void;
     onRemoveAll: () => void;
 
+
    
 }
 
@@ -13,6 +14,8 @@ const YourStackCard = ({  YourStack, onRemoveOne, onRemoveAll }: YourStackCardPr
     console.log(YourStack)
 
 
+
+  
     
 
 

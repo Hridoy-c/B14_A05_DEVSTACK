@@ -11,6 +11,11 @@ const ExploreTechnologies = ({
   TechnologyPromise,
 }: ExploreTechnologiesProps) => {
   const [YourStack, setYourStack] = useState<ITechnologyType[]>([]);
+  
+   
+
+
+  
 
   const handleRemoveOne = (technologyId: string) => {
     const removeTechnology = YourStack.filter(
@@ -32,10 +37,13 @@ const ExploreTechnologies = ({
             Technologies={Technologies}
             YourStack={YourStack}
             setYourStack={setYourStack}
+            
+             
+            
           />
         </div>
 
-        <StackSidebar YourStack={YourStack} onRemoveOne={handleRemoveOne} onRemoveAll={handleRemoveAll} />
+        <StackSidebar YourStack={YourStack} onRemoveOne={handleRemoveOne} onRemoveAll={handleRemoveAll}  />
       </div>
     </div>
   );
