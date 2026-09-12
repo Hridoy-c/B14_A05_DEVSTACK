@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { ITechnologyType } from "../../types/TechnologyType";
 import StackSidebar from "./StackSidebar";
 import TechnologyGrid from "./TechnologyGrid";
+import { Bounce, toast } from "react-toastify/unstyled";
 
 interface ExploreTechnologiesProps {
   TechnologyPromise: Promise<ITechnologyType[]>;
@@ -10,7 +11,9 @@ interface ExploreTechnologiesProps {
 const ExploreTechnologies = ({
   TechnologyPromise,
 }: ExploreTechnologiesProps) => {
+
   const [YourStack, setYourStack] = useState<ITechnologyType[]>([]);
+  
   
    
 
@@ -22,10 +25,32 @@ const ExploreTechnologies = ({
       (technology) => technology.id !== technologyId,
     );
     setYourStack(removeTechnology);
+    toast.info("remove", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   const handleRemoveAll = () => {
     setYourStack([]);
+    toast.info("remove all", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   const Technologies = use(TechnologyPromise);

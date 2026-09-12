@@ -6,6 +6,7 @@ interface TechnologyGridProps {
   Technologies: ITechnologyType[];
   YourStack: ITechnologyType[];
   setYourStack: Dispatch<SetStateAction<ITechnologyType[]>>;
+  
 
 }
 
@@ -13,6 +14,7 @@ const TechnologyGrid = ({
   Technologies,
   YourStack,
   setYourStack,
+
  
 }: TechnologyGridProps) => {
   return (
