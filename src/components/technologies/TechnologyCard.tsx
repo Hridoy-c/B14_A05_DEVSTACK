@@ -78,7 +78,7 @@ const TechnologyCard = ({
               : "bg-slate-900 text-white hover:bg-slate-800"
           }`}
         >
-          {isInStack ? "Added to Stack" : "Add to Stack"}
+          {isInStack ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </>
